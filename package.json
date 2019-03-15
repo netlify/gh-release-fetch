@@ -1,0 +1,26 @@
+{
+  "name": "gh-release-fetch",
+  "version": "1.0.0",
+  "description": "A library to fetch release binaries from GitHub Releases",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "tslint --project \"./tsconfig.json\""
+  },
+  "keywords": [],
+  "author": "David Calavera",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^11.11.3",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@types/download": "^6.2.4",
+    "@types/mkdirp": "^0.5.2",
+    "download": "^7.1.0",
+    "mkdirp": "^0.5.1"
+  }
+}
