@@ -1,5 +1,6 @@
 import * as download from 'download';
 import * as mkdirp from 'mkdirp';
+import fetch from 'node-fetch';
 
 export interface Release {
   repository: string;
