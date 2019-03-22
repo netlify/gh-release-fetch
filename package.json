@@ -1,6 +1,6 @@
 {
   "name": "gh-release-fetch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library to fetch release binaries from GitHub Releases",
   "main": "dist/index.js",
   "scripts": {
@@ -21,8 +21,10 @@
     "@types/download": "^6.2.4",
     "@types/mkdirp": "^0.5.2",
     "@types/node-fetch": "^2.1.6",
+    "@types/semver": "^5.5.0",
     "download": "^7.1.0",
     "mkdirp": "^0.5.1",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "semver": "^5.6.0"
   }
 }
