@@ -23,7 +23,7 @@ export async function fetchVersion(release: Release) {
 
 export async function updateAvailable(repository: string, currentVersion: string): Promise<boolean> {
   const latestVersion = await resolveRelease(repository);
-  return gt(latestVersion, currentVersion);
+  return newerVersion(latestVersion, currentVersion);
 }
 
 async function resolveRelease(repository: string): Promise<string> {
@@ -54,4 +54,19 @@ function validateRelease(release: Release) {
   if (!release.version) {
     throw new Error('Missing release version');
   }
+}
+
+export function newerVersion(latestVersion: string, currentVersion: string): boolean {
+  if (!latestVersion) {
+    return false;
+  }
+
+  if (!currentVersion) {
+    return true;
+  }
+
+  const l = latestVersion.replace(/^v/, '');
+  const c = currentVersion.replace(/^v/, '');
+
+  return gt(l, c);
 }
