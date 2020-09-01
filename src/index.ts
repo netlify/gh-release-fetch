@@ -27,8 +27,17 @@ export async function updateAvailable(repository: string, currentVersion: string
 }
 
 async function resolveRelease(repository: string): Promise<string> {
-  const res = await fetch(`https://api.github.com/repos/${repository}/releases/latest`);
+  const res = await fetch(
+    `https://api.github.com/repos/${repository}/releases/latest`
+  );
   const json = await res.json();
+  if (
+    res.status === 403 &&
+    typeof json.message === 'string' &&
+    json.message.includes('API rate limit exceeded')
+  ) {
+    throw new Error('API rate limit exceeded, please try again later');
+  }
   return json.tag_name;
 }
 
