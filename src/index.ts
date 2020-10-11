@@ -1,7 +1,10 @@
 import * as download from 'download';
 import * as mkdirp from 'mkdirp';
-import fetch from 'node-fetch';
+import fetch, { RequestInit } from 'node-fetch';
 import { gt } from 'semver';
+import { Agent } from 'http';
+
+interface DownloadOptions { agent?: Agent; }
 
 export interface Release {
   repository: string;
@@ -11,24 +14,38 @@ export interface Release {
   extract: boolean;
 }
 
-export async function fetchLatest(release: Release) {
-  release.version = await resolveRelease(release.repository);
-  return fetchVersion(release);
+export async function fetchLatest(
+  release: Release,
+  fetchOptions?: RequestInit
+) {
+  release.version = await resolveRelease(release.repository, fetchOptions);
+  return fetchVersion(release, { agent: fetchOptions && fetchOptions.agent });
 }
 
-export async function fetchVersion(release: Release) {
+export async function fetchVersion(
+  release: Release,
+  { agent }: DownloadOptions = {}
+) {
   validateRelease(release);
-  await downloadFile(release);
+  await downloadFile(release, { agent });
 }
 
-export async function updateAvailable(repository: string, currentVersion: string): Promise<boolean> {
-  const latestVersion = await resolveRelease(repository);
+export async function updateAvailable(
+  repository: string,
+  currentVersion: string,
+  fetchOptions?: RequestInit
+): Promise<boolean> {
+  const latestVersion = await resolveRelease(repository, fetchOptions);
   return newerVersion(latestVersion, currentVersion);
 }
 
-async function resolveRelease(repository: string): Promise<string> {
+async function resolveRelease(
+  repository: string,
+  fetchOptions?: RequestInit
+): Promise<string> {
   const res = await fetch(
-    `https://api.github.com/repos/${repository}/releases/latest`
+    `https://api.github.com/repos/${repository}/releases/latest`,
+    fetchOptions
   );
   const json = await res.json();
   if (
@@ -41,10 +58,13 @@ async function resolveRelease(repository: string): Promise<string> {
   return json.tag_name;
 }
 
-async function downloadFile(release: Release) {
+async function downloadFile(release: Release, { agent }: DownloadOptions) {
   const url = `https://github.com/${release.repository}/releases/download/${release.version}/${release.package}`;
   mkdirp.sync(release.destination);
-  await download(url, release.destination, { extract: release.extract });
+  await download(url, release.destination, {
+    extract: release.extract,
+    agent
+  });
 }
 
 function validateRelease(release: Release) {
