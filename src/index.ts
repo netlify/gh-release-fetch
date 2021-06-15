@@ -5,9 +5,7 @@ import makeDir from 'make-dir'
 import fetch, { RequestInit } from 'node-fetch'
 import { gt } from 'semver'
 
-interface DownloadOptions {
-  agent?: Agent
-}
+type DownloadOptions = Pick<RequestInit, 'agent'>
 
 export interface Release {
   repository: string
@@ -20,7 +18,8 @@ export interface Release {
 export async function fetchLatest(release: Release, fetchOptions?: RequestInit): Promise<void> {
   // eslint-disable-next-line no-param-reassign
   release.version = await resolveRelease(release.repository, fetchOptions)
-  return fetchVersion(release, { agent: fetchOptions && fetchOptions.agent })
+  const agent = fetchOptions && fetchOptions.agent
+  return fetchVersion(release, { agent })
 }
 
 export async function fetchVersion(release: Release, { agent }: DownloadOptions = {}): Promise<void> {
@@ -51,7 +50,7 @@ async function downloadFile(release: Release, { agent }: DownloadOptions) {
   await makeDir(release.destination)
   await download(url, release.destination, {
     extract: release.extract,
-    agent,
+    agent: agent as Agent,
   })
 }
 
