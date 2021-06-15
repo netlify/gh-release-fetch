@@ -1,8 +1,7 @@
 import { Agent } from 'http'
 
-// eslint-disable-next-line import/no-namespace
-import * as download from 'download'
-import { sync } from 'mkdirp'
+import download from 'download'
+import mkdirp from 'mkdirp'
 import fetch, { RequestInit } from 'node-fetch'
 import { gt } from 'semver'
 
@@ -49,7 +48,7 @@ async function resolveRelease(repository: string, fetchOptions?: RequestInit): P
 
 async function downloadFile(release: Release, { agent }: DownloadOptions) {
   const url = `https://github.com/${release.repository}/releases/download/${release.version}/${release.package}`
-  sync(release.destination)
+  mkdirp.sync(release.destination)
   await download(url, release.destination, {
     extract: release.extract,
     agent,
