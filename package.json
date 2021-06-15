@@ -33,7 +33,7 @@
     "fetch"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "author": "David Calavera",
   "license": "MIT",
