@@ -49,10 +49,10 @@
     "typescript": "^3.3.4000"
   },
   "dependencies": {
-    "@types/download": "^6.2.4",
+    "@types/download": "^8.0.0",
     "@types/node-fetch": "^2.1.6",
     "@types/semver": "^5.5.0",
-    "download": "^7.1.0",
+    "download": "^8.0.0",
     "make-dir": "^3.1.0",
     "node-fetch": "^2.3.0",
     "semver": "^5.6.0"
