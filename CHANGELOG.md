@@ -1,5 +1,14 @@
 # Changelog
 
+### [2.0.1](https://www.github.com/netlify/gh-release-fetch/compare/v2.0.0...v2.0.1) (2021-07-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/download to v8.0.1 ([d374b05](https://www.github.com/netlify/gh-release-fetch/commit/d374b05248506a83f7baf808c0ecb009e2893132))
+* **deps:** update dependency @types/node-fetch to v2.5.11 ([a64cbda](https://www.github.com/netlify/gh-release-fetch/commit/a64cbda9951805ac17106fe77c401676b863dfd0))
+* **deps:** update dependency @types/semver to v7.3.7 ([7d6e041](https://www.github.com/netlify/gh-release-fetch/commit/7d6e0412aff07097d1c1f8af981939d782466193))
+
 ## [2.0.0](https://www.github.com/netlify/gh-release-fetch/compare/v1.1.0...v2.0.0) (2021-06-15)
 
 
