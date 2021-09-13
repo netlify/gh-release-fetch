@@ -1,6 +1,6 @@
 {
   "name": "gh-release-fetch",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A library to fetch release binaries from GitHub Releases",
   "main": "dist/index.js",
   "scripts": {

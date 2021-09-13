@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.3](https://www.github.com/netlify/gh-release-fetch/compare/v2.0.2...v2.0.3) (2021-09-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency node-fetch to v2.6.2 ([#106](https://www.github.com/netlify/gh-release-fetch/issues/106)) ([07a50b2](https://www.github.com/netlify/gh-release-fetch/commit/07a50b2cb7261c4ba7676dd84ea127848b606c57))
+
 ### [2.0.2](https://www.github.com/netlify/gh-release-fetch/compare/v2.0.1...v2.0.2) (2021-07-26)
 
 
