@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@types/download": "^8.0.0",
-    "@types/node-fetch": "^2.1.6",
+    "@types/node-fetch": "^3.0.0",
     "@types/semver": "^7.0.0",
     "download": "^8.0.0",
     "make-dir": "^3.1.0",
