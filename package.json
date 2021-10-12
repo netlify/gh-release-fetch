@@ -38,7 +38,7 @@
   "author": "David Calavera",
   "license": "MIT",
   "devDependencies": {
-    "@netlify/eslint-config-node": "^3.3.0",
+    "@netlify/eslint-config-node": "^3.3.2",
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.0",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
