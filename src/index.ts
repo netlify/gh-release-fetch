@@ -1,7 +1,7 @@
+import { promises as fs } from 'fs'
 import { Agent } from 'http'
 
 import download from 'download'
-import makeDir from 'make-dir'
 import fetch, { RequestInit } from 'node-fetch'
 import { gt } from 'semver'
 
@@ -47,7 +47,7 @@ async function resolveRelease(repository: string, fetchOptions?: RequestInit): P
 
 async function downloadFile(release: Release, { agent }: DownloadOptions) {
   const url = `https://github.com/${release.repository}/releases/download/${release.version}/${release.package}`
-  await makeDir(release.destination)
+  await fs.mkdir(release.destination, { recursive: true })
   await download(url, release.destination, {
     extract: release.extract,
     agent: agent as Agent,
