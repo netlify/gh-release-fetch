@@ -1,5 +1,13 @@
 # Changelog
 
+### [2.0.5](https://www.github.com/netlify/gh-release-fetch/compare/v2.0.4...v2.0.5) (2022-01-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/semver to v7.3.9 ([#135](https://www.github.com/netlify/gh-release-fetch/issues/135)) ([849515f](https://www.github.com/netlify/gh-release-fetch/commit/849515ff3b6f4ccc46df495be744b3295028cf29))
+* **deps:** update dependency node-fetch to v2.6.6 ([c59e4d3](https://www.github.com/netlify/gh-release-fetch/commit/c59e4d36a3c571a92a7eccaa2268cc513a2676d9))
+
 ### [2.0.4](https://www.github.com/netlify/gh-release-fetch/compare/v2.0.3...v2.0.4) (2021-09-27)
 
 
