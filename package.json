@@ -36,7 +36,7 @@
     "fetch"
   ],
   "engines": {
-    "node": ">=10"
+    "node": "^12.20.0 || ^14.14.0 || >=16.0.0"
   },
   "author": "David Calavera",
   "license": "MIT",
@@ -56,7 +56,6 @@
     "@types/node-fetch": "^2.1.6",
     "@types/semver": "^7.0.0",
     "download": "^8.0.0",
-    "make-dir": "^3.1.0",
     "node-fetch": "^2.3.0",
     "semver": "^7.0.0"
   }
