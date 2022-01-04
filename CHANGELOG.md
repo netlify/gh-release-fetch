@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.6](https://github.com/netlify/gh-release-fetch/compare/v2.0.5...v2.0.6) (2022-01-04)
+
+
+### Bug Fixes
+
+* specify the files to include in the package ([#214](https://github.com/netlify/gh-release-fetch/issues/214)) ([710b007](https://github.com/netlify/gh-release-fetch/commit/710b0075302cccc65f93b6fc39df5dab9f68604b))
+
 ### [2.0.5](https://github.com/netlify/gh-release-fetch/compare/v2.0.4...v2.0.5) (2022-01-04)
 
 
