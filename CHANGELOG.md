@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/netlify/gh-release-fetch/compare/v2.0.6...v3.0.0) (2022-01-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove make-dir package and use native, drop Node.js 10 support
+
+### Miscellaneous Chores
+
+* remove make-dir package and use native, drop Node.js 10 support ([144bfd6](https://github.com/netlify/gh-release-fetch/commit/144bfd691e663622aca30a764cd1810d096e0087))
+
 ### [2.0.6](https://github.com/netlify/gh-release-fetch/compare/v2.0.5...v2.0.6) (2022-01-04)
 
 
