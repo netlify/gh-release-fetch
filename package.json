@@ -7,6 +7,7 @@
     "dist/*.{js,ts}"
   ],
   "scripts": {
+    "prepare": "husky install node_modules/@netlify/eslint-config-node/.husky/",
     "prepublishOnly": "npm ci && run-s build test",
     "test": "jest",
     "build": "tsc",
@@ -24,12 +25,6 @@
     "eslint": "--ignore-path .gitignore --cache --format=codeframe --max-warnings=0 \"{src,tests,.github}/**/*.{ts,js,html}\" \"*.{ts,js,html}\" \".*.{ts,js,html}\"",
     "prettier": "--ignore-path .gitignore --loglevel=warn \"{src,tests,.github}/**/*.{ts,js,md,yml,json,html}\" \"*.{ts,js,yml,json,html}\" \".*.{ts,js,yml,json,html}\" \"!package-lock.json\""
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run format"
-    }
-  },
   "keywords": [
     "github",
     "release",
@@ -44,6 +39,7 @@
     "@netlify/eslint-config-node": "^4.1.3",
     "@types/jest": "^27.0.0",
     "@types/node": "^16.0.0",
+    "husky": "^7.0.4",
     "jest": "^27.0.0",
     "ts-jest": "^27.0.0",
     "typescript": "^4.0.0"
