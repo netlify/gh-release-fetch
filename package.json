@@ -35,21 +35,21 @@
   },
   "author": "David Calavera",
   "license": "MIT",
+  "dependencies": {
+    "download": "^8.0.0",
+    "node-fetch": "^2.3.0",
+    "semver": "^7.0.0"
+  },
   "devDependencies": {
     "@netlify/eslint-config-node": "^4.1.5",
+    "@types/download": "^8.0.0",
     "@types/jest": "^27.0.0",
     "@types/node": "^16.0.0",
+    "@types/node-fetch": "^2.1.6",
+    "@types/semver": "^7.0.0",
     "husky": "^7.0.4",
     "jest": "^27.0.0",
     "ts-jest": "^27.0.0",
     "typescript": "^4.0.0"
-  },
-  "dependencies": {
-    "@types/download": "^8.0.0",
-    "@types/node-fetch": "^2.1.6",
-    "@types/semver": "^7.0.0",
-    "download": "^8.0.0",
-    "node-fetch": "^2.3.0",
-    "semver": "^7.0.0"
   }
 }
