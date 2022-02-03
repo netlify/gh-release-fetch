@@ -36,7 +36,7 @@
   "author": "David Calavera",
   "license": "MIT",
   "devDependencies": {
-    "@netlify/eslint-config-node": "^5.1.1",
+    "@netlify/eslint-config-node": "^5.1.2",
     "@types/jest": "^27.0.0",
     "@types/node": "^16.0.0",
     "husky": "^7.0.4",
