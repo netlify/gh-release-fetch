@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.0.2](https://github.com/netlify/gh-release-fetch/compare/v3.0.1...v3.0.2) (2022-03-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node-fetch to v2.6.1 ([#270](https://github.com/netlify/gh-release-fetch/issues/270)) ([e411ef8](https://github.com/netlify/gh-release-fetch/commit/e411ef8cc84dee1fd5c5c533b596c3b7b46bb3ef))
+
 ### [3.0.1](https://github.com/netlify/gh-release-fetch/compare/v3.0.0...v3.0.1) (2022-01-17)
 
 
