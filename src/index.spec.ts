@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires,node/global-require */
+/* eslint-disable @typescript-eslint/no-var-requires, n/global-require */
 import { newerVersion, fetchLatest } from './index'
 
 test('compare versions', () => {
@@ -71,4 +71,4 @@ describe('fetchLatest', () => {
     })
   })
 })
-/* eslint-enable @typescript-eslint/no-var-requires,node/global-require */
+/* eslint-enable @typescript-eslint/no-var-requires, n/global-require */
