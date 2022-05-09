@@ -1,5 +1,13 @@
 # Changelog
 
+### [3.0.3](https://github.com/netlify/gh-release-fetch/compare/v3.0.2...v3.0.3) (2022-05-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency semver to v7.3.6 ([#286](https://github.com/netlify/gh-release-fetch/issues/286)) ([3834d99](https://github.com/netlify/gh-release-fetch/commit/3834d99fa2c7d6b8b9e4d921c6cedacc35126c44))
+* **deps:** update dependency semver to v7.3.7 ([#290](https://github.com/netlify/gh-release-fetch/issues/290)) ([8998dfb](https://github.com/netlify/gh-release-fetch/commit/8998dfb710918735bcccdc8eb2f47543f4690169))
+
 ### [3.0.2](https://github.com/netlify/gh-release-fetch/compare/v3.0.1...v3.0.2) (2022-03-21)
 
 
