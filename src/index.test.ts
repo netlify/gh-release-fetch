@@ -1,5 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires, n/global-require */
-import { newerVersion, fetchLatest } from './index'
+import fetch, { Response } from 'node-fetch'
+import { beforeEach, describe, expect, test, vi } from 'vitest'
+
+import { newerVersion, fetchLatest } from './index.js'
+
+vi.mock('node-fetch')
+vi.mock('@xhmikosr/downloader')
 
 test('compare versions', () => {
   expect(newerVersion('0.1.0', '0.0.1')).toBe(true)
@@ -11,24 +16,20 @@ test('compare versions', () => {
   expect(newerVersion('', '0.0.1')).toBe(false)
 })
 
-jest.mock('node-fetch')
-jest.mock('download')
-
 describe('fetchLatest', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   test('should throw error when api limit is reached', async () => {
-    const fetch = require('node-fetch')
     const response = {
       status: 403,
       json: () =>
         Promise.resolve({
           message: 'API rate limit exceeded for ',
         }),
-    }
-    fetch.mockResolvedValue(response)
+    } as Response
+    vi.mocked(fetch).mockResolvedValue(response)
 
     await expect(
       fetchLatest({
@@ -42,15 +43,14 @@ describe('fetchLatest', () => {
   })
 
   test('should add fetch options to API call when passed as a second argument', async () => {
-    const fetch = require('node-fetch')
     const response = {
       status: 200,
       json: () =>
         Promise.resolve({
           tag_name: 'v1.0.0',
         }),
-    }
-    fetch.mockResolvedValue(response)
+    } as Response
+    vi.mocked(fetch).mockResolvedValue(response)
 
     await expect(
       fetchLatest(
@@ -71,4 +71,3 @@ describe('fetchLatest', () => {
     })
   })
 })
-/* eslint-enable @typescript-eslint/no-var-requires, n/global-require */
