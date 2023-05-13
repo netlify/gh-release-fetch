@@ -18,24 +18,7 @@ describe('integration', () => {
     vi.resetAllMocks()
   })
 
-  test('should download simple file', async () => {
-    const tmpDir = temporaryDirectory()
-    await fetchLatest({
-      ...baseRelease,
-      package: 'checksums.txt',
-      destination: tmpDir,
-      extract: false,
-    })
-
-    const file = join(tmpDir, 'checksums.txt')
-
-    expect(existsSync(file)).toBe(true)
-
-    const content = await readFile(file, 'utf-8')
-    expect(content).toContain('live-tunnel-client-linux-386.tar.gz')
-
-    await rm(tmpDir, { force: true, recursive: true, maxRetries: 10 })
-  })
+  // Do as little tests as necessary here for now, as we run into GH rate limiting
 
   test('should download simple file with custom agent', async () => {
     const tmpDir = temporaryDirectory()
