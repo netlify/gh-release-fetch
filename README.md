@@ -7,9 +7,9 @@ Thin wrapper to fetch packages from GitHub releases.
 ### Typescript
 
 ```ts
-import * from 'release-fetch'
+import { fetchLatest } from 'gh-release-fetch'
 
-fetchLatest({ repository: 'netlify/netlify-cli', package: 'cli.tar.gz', destination: 'dist' });
+fetchLatest({ repository: 'netlify/netlify-cli', package: 'cli.tar.gz', destination: 'dist' })
 ```
 
 ## License

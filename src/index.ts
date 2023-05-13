@@ -1,7 +1,8 @@
 import { promises as fs } from 'fs'
-import { Agent } from 'http'
+import { Agent } from 'https'
 
-import download from 'download'
+// @ts-expect-error this module does not have types itself, we need to use `download` types
+import download from '@xhmikosr/downloader'
 import fetch, { RequestInit } from 'node-fetch'
 import { gt } from 'semver'
 
@@ -38,11 +39,11 @@ export async function updateAvailable(
 
 async function resolveRelease(repository: string, fetchOptions?: RequestInit): Promise<string> {
   const res = await fetch(`https://api.github.com/repos/${repository}/releases/latest`, fetchOptions)
-  const json = await res.json()
+  const json = (await res.json()) as Record<string, unknown>
   if (res.status === 403 && typeof json.message === 'string' && json.message.includes('API rate limit exceeded')) {
     throw new Error('API rate limit exceeded, please try again later')
   }
-  return json.tag_name
+  return json.tag_name as string
 }
 
 async function downloadFile(release: Release, { agent }: DownloadOptions) {
@@ -50,7 +51,7 @@ async function downloadFile(release: Release, { agent }: DownloadOptions) {
   await fs.mkdir(release.destination, { recursive: true })
   await download(url, release.destination, {
     extract: release.extract,
-    agent: agent as Agent,
+    agent: { https: agent as Agent },
   })
 }
 
