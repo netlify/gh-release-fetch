@@ -1,5 +1,31 @@
 # Changelog
 
+## [4.0.0](https://github.com/netlify/gh-release-fetch/compare/v3.0.2...v4.0.0) (2023-05-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* This package now requires Node.js 14 and is pure ESM
+
+### Features
+
+* update everything ([50656a8](https://github.com/netlify/gh-release-fetch/commit/50656a8b63310a2d9efb22ae6c848a412e6409e4))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/download to v8.0.2 ([#338](https://github.com/netlify/gh-release-fetch/issues/338)) ([dff8e5c](https://github.com/netlify/gh-release-fetch/commit/dff8e5c097eaf607acc0ea30952d183ca6abb9a9))
+* **deps:** update dependency @types/node-fetch to v2.6.2 ([#307](https://github.com/netlify/gh-release-fetch/issues/307)) ([e62212f](https://github.com/netlify/gh-release-fetch/commit/e62212f48e68309f24d77fae8b1da8f157d07896))
+* **deps:** update dependency @types/node-fetch to v2.6.3 ([#354](https://github.com/netlify/gh-release-fetch/issues/354)) ([87a28a8](https://github.com/netlify/gh-release-fetch/commit/87a28a833490061899c51486445dbc8c2913d84e))
+* **deps:** update dependency @types/semver to v7.3.10 ([#308](https://github.com/netlify/gh-release-fetch/issues/308)) ([fb12aee](https://github.com/netlify/gh-release-fetch/commit/fb12aeef28af6ff2b6e31c56903f86b9165ef99d))
+* **deps:** update dependency @types/semver to v7.3.12 ([#315](https://github.com/netlify/gh-release-fetch/issues/315)) ([e8a4be5](https://github.com/netlify/gh-release-fetch/commit/e8a4be54e8a023def557d9d73d680e71f92d3131))
+* **deps:** update dependency @types/semver to v7.3.13 ([#330](https://github.com/netlify/gh-release-fetch/issues/330)) ([3b44a29](https://github.com/netlify/gh-release-fetch/commit/3b44a29c9fc513d4d7f92241635251515f1e2e4c))
+* **deps:** update dependency node-fetch to v2.6.8 ([#342](https://github.com/netlify/gh-release-fetch/issues/342)) ([83f4c66](https://github.com/netlify/gh-release-fetch/commit/83f4c6634f9fdaf574eecff27c65d0b249673f21))
+* **deps:** update dependency node-fetch to v2.6.9 ([#345](https://github.com/netlify/gh-release-fetch/issues/345)) ([14b19ed](https://github.com/netlify/gh-release-fetch/commit/14b19ed54f1eab7efeb0f8ae8aa73167c7151fba))
+* **deps:** update dependency semver to v7.3.6 ([#286](https://github.com/netlify/gh-release-fetch/issues/286)) ([3834d99](https://github.com/netlify/gh-release-fetch/commit/3834d99fa2c7d6b8b9e4d921c6cedacc35126c44))
+* **deps:** update dependency semver to v7.3.7 ([#290](https://github.com/netlify/gh-release-fetch/issues/290)) ([8998dfb](https://github.com/netlify/gh-release-fetch/commit/8998dfb710918735bcccdc8eb2f47543f4690169))
+* **deps:** update dependency semver to v7.3.8 ([#326](https://github.com/netlify/gh-release-fetch/issues/326)) ([d827a9e](https://github.com/netlify/gh-release-fetch/commit/d827a9ea7f3dddeb0e94f10d774b8475ee729a97))
+
 ### [3.0.2](https://github.com/netlify/gh-release-fetch/compare/v3.0.1...v3.0.2) (2022-03-21)
 
 
