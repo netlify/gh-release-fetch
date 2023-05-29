@@ -50,7 +50,7 @@
     "vitest": "0.31.0"
   },
   "dependencies": {
-    "@xhmikosr/downloader": "^9.0.0",
+    "@xhmikosr/downloader": "^10.0.0",
     "node-fetch": "^3.0.0",
     "semver": "^7.0.0"
   }
