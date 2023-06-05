@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.1](https://github.com/netlify/gh-release-fetch/compare/v4.0.0...v4.0.1) (2023-06-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @xhmikosr/downloader to v11 ([c01d976](https://github.com/netlify/gh-release-fetch/commit/c01d9765ea834a4573b4db08e9a2abf47e59bdb0))
+* enforce latest known working version ([0cbffac](https://github.com/netlify/gh-release-fetch/commit/0cbfface5c5f70739d999a94d1b4a3cb1874d73a))
+
 ## [4.0.0](https://github.com/netlify/gh-release-fetch/compare/v3.0.2...v4.0.0) (2023-05-13)
 
 
