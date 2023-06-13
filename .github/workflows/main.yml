@@ -45,6 +45,8 @@ jobs:
         run: npm run build
       - name: Tests
         run: npm run test:ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Get test coverage flags
         id: test-coverage-flags
         run: |-
