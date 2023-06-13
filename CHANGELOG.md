@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.2](https://github.com/netlify/gh-release-fetch/compare/v4.0.1...v4.0.2) (2023-06-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @xhmikosr/downloader to v12 ([8fa7551](https://github.com/netlify/gh-release-fetch/commit/8fa7551cd4034b3c07d801501bbe837d6b4ce207))
+
 ## [4.0.1](https://github.com/netlify/gh-release-fetch/compare/v4.0.0...v4.0.1) (2023-06-05)
 
 
