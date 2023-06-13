@@ -6,7 +6,11 @@ import download from '@xhmikosr/downloader'
 import fetch, { RequestInit } from 'node-fetch'
 import { gt } from 'semver'
 
-type DownloadOptions = Pick<RequestInit, 'agent'>
+interface DownloadOptions {
+  agent?: Agent
+}
+
+interface FetchOptions extends Omit<RequestInit, 'agent'>, DownloadOptions {}
 
 export interface Release {
   repository: string
@@ -16,10 +20,13 @@ export interface Release {
   extract: boolean
 }
 
-export async function fetchLatest(release: Release, fetchOptions?: RequestInit): Promise<void> {
+const versionPrefixRegex = /^v/
+
+export async function fetchLatest(release: Release, fetchOptions?: FetchOptions): Promise<void> {
   // eslint-disable-next-line no-param-reassign
   release.version = await resolveRelease(release.repository, fetchOptions)
   const agent = fetchOptions && fetchOptions.agent
+
   return fetchVersion(release, { agent })
 }
 
@@ -51,7 +58,9 @@ async function downloadFile(release: Release, { agent }: DownloadOptions) {
   await fs.mkdir(release.destination, { recursive: true })
   await download(url, release.destination, {
     extract: release.extract,
-    agent: { https: agent as Agent },
+    got: {
+      agent: { https: agent as Agent },
+    },
   })
 }
 
@@ -82,8 +91,8 @@ export function newerVersion(latestVersion: string, currentVersion: string): boo
     return true
   }
 
-  const normalizedLatestVersion = latestVersion.replace(/^v/, '')
-  const normalizedCurrentVersion = currentVersion.replace(/^v/, '')
+  const normalizedLatestVersion = latestVersion.replace(versionPrefixRegex, '')
+  const normalizedCurrentVersion = currentVersion.replace(versionPrefixRegex, '')
 
   return gt(normalizedLatestVersion, normalizedCurrentVersion)
 }
