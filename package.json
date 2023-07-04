@@ -36,6 +36,7 @@
     "node": "^14.18.0 || ^16.13.0 || >=18.0.0"
   },
   "author": "David Calavera",
+  "repository": "netlify/gh-release-fetch",
   "license": "MIT",
   "devDependencies": {
     "@netlify/eslint-config-node": "7.0.1",
