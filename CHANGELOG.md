@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.0.3](https://github.com/netlify/gh-release-fetch/compare/v4.0.2...v4.0.3) (2023-07-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @xhmikosr/downloader to v13 ([#377](https://github.com/netlify/gh-release-fetch/issues/377)) ([0953c3f](https://github.com/netlify/gh-release-fetch/commit/0953c3ffe59c119f9f4d6ce80239d6675fdd5295))
+* **deps:** update dependency semver to v7.5.2 ([#374](https://github.com/netlify/gh-release-fetch/issues/374)) ([6f0f844](https://github.com/netlify/gh-release-fetch/commit/6f0f844c659b23695306f4877c275ecfd7a1d125))
+* **deps:** update dependency semver to v7.5.3 ([#376](https://github.com/netlify/gh-release-fetch/issues/376)) ([9f1612f](https://github.com/netlify/gh-release-fetch/commit/9f1612f0fcbc0b7dae142d7715c638fa7f3fa66f))
+
 ## [4.0.2](https://github.com/netlify/gh-release-fetch/compare/v4.0.1...v4.0.2) (2023-06-13)
 
 
