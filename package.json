@@ -47,7 +47,7 @@
     "husky": "8.0.3",
     "npm-run-all2": "5.0.2",
     "tempy": "3.0.0",
-    "typescript": "5.3.3",
+    "typescript": "5.4.2",
     "vitest": "0.34.6"
   },
   "dependencies": {
