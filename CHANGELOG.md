@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.4](https://github.com/netlify/gh-release-fetch/compare/v4.0.3...v4.0.4) (2024-03-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency semver to v7.5.4 ([8f270c9](https://github.com/netlify/gh-release-fetch/commit/8f270c9d7cceee5ef1d5e4b9460052687240eea3))
+* **deps:** update dependency semver to v7.6.0 ([f41e275](https://github.com/netlify/gh-release-fetch/commit/f41e275473d0cc261ee791f6acb7054a5ef42177))
+
 ## [4.0.3](https://github.com/netlify/gh-release-fetch/compare/v4.0.2...v4.0.3) (2023-07-06)
 
 
