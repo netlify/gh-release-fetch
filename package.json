@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "!dist/*.test.*"
   ],
   "scripts": {
     "prepare": "husky install node_modules/@netlify/eslint-config-node/.husky/",
