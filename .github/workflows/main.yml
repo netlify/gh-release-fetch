@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -33,7 +33,7 @@ jobs:
             node-version: 14.18.0
     steps:
       - name: Git checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
