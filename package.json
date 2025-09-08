@@ -43,12 +43,12 @@
     "@types/download": "8.0.5",
     "@types/node": "14.18.63",
     "@types/semver": "7.7.1",
-    "@vitest/coverage-v8": "0.34.6",
+    "@vitest/coverage-v8": "3.2.4",
     "husky": "8.0.3",
     "npm-run-all2": "5.0.2",
     "tempy": "3.0.0",
     "typescript": "5.9.2",
-    "vitest": "0.34.6"
+    "vitest": "3.2.4"
   },
   "dependencies": {
     "@xhmikosr/downloader": "^13.0.0",
