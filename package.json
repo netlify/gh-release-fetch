@@ -45,7 +45,7 @@
     "@types/semver": "7.7.1",
     "@vitest/coverage-v8": "0.34.6",
     "husky": "8.0.3",
-    "npm-run-all2": "5.0.2",
+    "npm-run-all2": "8.0.4",
     "tempy": "3.0.0",
     "typescript": "5.9.2",
     "vitest": "0.34.6"
