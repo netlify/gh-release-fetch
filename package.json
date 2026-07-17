@@ -48,7 +48,7 @@
     "npm-run-all2": "5.0.2",
     "tempy": "3.0.0",
     "typescript": "5.9.3",
-    "vitest": "0.34.6"
+    "vitest": "3.2.6"
   },
   "dependencies": {
     "@xhmikosr/downloader": "^13.0.0",
